@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>ssaOrvibo</id>
+    <name>Orvibo</name>
+    <description>Orvibo SSA</description>
+    <icon>fa fa-keyboard-o</icon>
+    <licence>AGPL</licence>
+    <author>Stephane SAUTRON</author>
+    <installation>Aucune</installation>
+    <require>1.136</require>
+    <category>Objets connectés</category>
+    <include type="php">ssaOrvibo.inc</include>
+</info>
+
