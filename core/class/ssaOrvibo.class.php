@@ -22,7 +22,7 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 class ssaOrvibo extends eqLogic {
     
     
-    public static function sendIr($eqLogic,$codeIr) 
+    public static function sendIr($eqLogic,$cmd) 
     {   
         
         $port = 10000;
@@ -31,6 +31,12 @@ class ssaOrvibo extends eqLogic {
         
         $log_etat="learnIp |".$orbivo_data['addrIp']."|";
         log::add('ssaOrvibo', 'debug', $ssaEqlogicObj->getHumanName() . '[' . __FUNCTION__ . ']' . ' : ' . $log_etat);
+        
+        $ssaCmd= $ssaEqlogicObj->getCmd(null, $cmd);
+        $codeIr=$ssaCmd->getConfiguration('codeIr');
+       
+        
+        
         try {
             $orv= ssaOrviboDriver::getInstance()->setOrbivoIp($orbivo_data['addrIp'])->setPort($port);
             $orv->createUdpSocket();

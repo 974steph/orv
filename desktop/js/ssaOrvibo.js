@@ -78,16 +78,16 @@ function learnIr(orbivo,element){
 }
 
 
-function testIr(orbivo,element){
+function testIr(orbivo,cmd){
     
-        codeIr=element.val();
+       
 	$.ajax({// fonction permettant de faire de l'ajax
             type: "POST", // methode de transmission des données au fichier php
             url: "plugins/ssaOrvibo/core/ajax/ssaOrvibo.ajax.php", // url du fichier php
             data: {
                 action: "sendIr",  
                 logicalId: orbivo,
-            	codeIr: codeIr,
+            	cmdId: cmd,
             },
             dataType: 'json',
 			async: true,
@@ -98,10 +98,10 @@ function testIr(orbivo,element){
 	   success: function(data) 
            { 
             
-            if (data.state != 'ok') {
-            	$('#div_alert').showAlert({message: data.result, level: 'danger'});
-            	return;
-            }
+                if (data.state != 'ok') {
+                    $('#div_alert').showAlert({message: data.result, level: 'danger'});
+                    return;
+                }
              
             
             
@@ -126,7 +126,10 @@ $("#table_cmd").delegate('.bt_ssaOrviboTest', 'click', function () {
     var el = $(this);
     codeIr= el.closest('.ssaOrviboIr').find('.ssaOrviboCodeIr');
     orbivo=$("#ssaOrviboId").val();
-    testIr(orbivo,codeIr);
+    
+    cmd=$(this).closest("tr").find("input.ssaOrviboCmdLogicalId");
+    
+    testIr(orbivo,cmd.val());
 });
 
  

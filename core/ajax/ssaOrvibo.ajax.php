@@ -38,8 +38,8 @@ try {
     }
     
     if (init('action') == 'sendIr')
-    {	$lCodeIr= init('codeIr');
-        ajax::success(ssaOrvibo::sendIr($eqLogic,$lCodeIr));
+    {	$lcmd= init('cmdId');
+        ajax::success(ssaOrvibo::sendIr($eqLogic,$lcmd));
     }
 
     throw new Exception(__('Aucune méthode correspondante à : ', __FILE__) . init('action'));
