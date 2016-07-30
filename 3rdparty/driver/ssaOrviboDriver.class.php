@@ -2,7 +2,7 @@
 
 
 
-class orvibo
+class ssaOrviboDriver
 {   private  $sock;
     private $localIP ; 
 	private $broadcastip ; 
@@ -133,7 +133,7 @@ class orvibo
 
 
  	function createUdpSocket()
- 	{   var_dump($this->orbivoIp , $this->port);
+ 	{   
  		if(!($this->sock = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP)))
 		{
 	    	$errorcode = socket_last_error();
@@ -186,24 +186,29 @@ class orvibo
     	$rep['mac']=substr($chaine, strpos($chaine, 'accf'),12);
         
 
- 		return $rep;
+ 	return $rep;
 
 
 
     }
 
  	function discover()
-	{	$listAllOne=array();
+	{    
+                $listAllOne=array();
 		$payload = $this->makePayload(array(0x68, 0x64, 0x00, 0x06, 0x71, 0x61));
 		
-		
-		socket_sendto($this->sock, $payload, strlen($payload), 0, $this->orbivoIp, $this->port);
+                $client= socket_sendto($this->sock, $payload, strlen($payload), 0, $this->orbivoIp, $this->port);
+                if (!$client)
+                {
+                    $errorcode = socket_last_error();
+                    $errormsg = socket_strerror($errorcode);
 
+                    throw new Exception("Could not bind socket : [$errorcode] $errormsg \n");
+                    
+                }
 		$code=$this->receiveMessage('discover');
-		
-
-		
    		return $code;
+           
    	}
 
    	function emitIr($mac,$msg)
@@ -263,7 +268,7 @@ class orvibo
   		$payload .= $this->makePayload($irlen);
   		$payload .= $this->makePayload($this->HexStringToArray($code));
 
-  		var_dump($this->binaryToString($payload));
+  		//var_dump($this->binaryToString($payload));
 
   		socket_sendto($this->sock, $payload, strlen($payload), 0, $this->orbivoIp, $this->port);
    	}
@@ -326,7 +331,7 @@ class orvibo
    		//Receive some data
     	socket_set_option($this->sock,SOL_SOCKET,SO_RCVTIMEO,array("sec"=>10,"usec"=>0));
     	$end_time = time() + 2;
-    	echo "<br>lecture<br>";
+    	
 		while ($end_time > time()) {
     		socket_recvfrom($this->sock, $buffer, 512, 0, $this->orbivoIp, $this->port);
     		$message=$this->binaryToString($buffer);
