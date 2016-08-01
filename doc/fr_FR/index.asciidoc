@@ -1,25 +1,24 @@
 :icons:
-== Template
+== ssaOrvivo
 
 === Description
-Plugin servant de base pour les plugins.
-Attention lors de l'utilisation à bien remplacer tous les templates par l'id de votre plugin.
+
+
+Ce plugin permet de piloter le  Orvibo : AllOne 
+
+Les AllOne etant  des passerrelles  permettant de piloter des appareils infrarouge (TV, climatiseur, etc...).
+
+Le AllOne propose un mode apprentissage qui permet de lui apprendre un code infrarouge.
+
+
 
 '''
-=== Création plugin partie 1 : l'arborescence
+=== Configuration du plugin
 include::partie_1.asciidoc[]
 
 '''
-=== Création plugin partie 2 : plugin info
+=== Configuration d'un objet : plugin info
 include::partie_2.asciidoc[]
-
-'''
-=== Création plugin partie 3 : dossier desktop
-include::partie_3.asciidoc[]
-
-'''
-=== Création plugin partie 4 : dossier core
-include::partie_4.asciidoc[]
 
 '''
 === FAQ
