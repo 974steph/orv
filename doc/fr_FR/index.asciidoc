@@ -4,22 +4,29 @@
 === Description
 
 
-Ce plugin permet de piloter le  Orvibo : AllOne 
+Ce plugin permet de piloter le  Orvibo : AllOne
 
 Les AllOne etant  des passerrelles  permettant de piloter des appareils infrarouge (TV, climatiseur, etc...).
 
-Le AllOne propose un mode apprentissage qui permet de lui apprendre un code infrarouge.
+
 
 
 
 '''
 === Configuration du plugin
-include::partie_1.asciidoc[]
+include::configuration_pluging.asciidoc[]
 
 '''
-=== Configuration d'un objet : plugin info
-include::partie_2.asciidoc[]
+=== Configuration d'un objet : etape 1
+include::configuration_objet_1.asciidoc[]
+
+'''
+=== Configuration d'un objet : etape 2
+include::configuration_objet_1.asciidoc[]
 
 '''
 === FAQ
 include::faq.asciidoc[]
+
+=== Devellopeur
+include::dev.asciidoc[]
