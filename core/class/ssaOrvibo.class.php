@@ -27,32 +27,48 @@ class ssaOrvibo extends eqLogic {
         
         $port = 10000;
         $ssaEqlogicObj = ssaOrvibo::byId($eqLogic);
-        $orbivo_data=$ssaEqlogicObj->getConfiguration('commande');
+        if (is_object(($ssaEqlogicObj))) 
+        {        
+            $orbivo_data=$ssaEqlogicObj->getConfiguration('commande');
+            $log_etat="ip |".$orbivo_data['addrIp']."|";
+            log::add('ssaOrvibo', 'debug', $ssaEqlogicObj->getHumanName() . '[' . __FUNCTION__ . ']' . ' : ' . $log_etat);
         
-        $log_etat="learnIp |".$orbivo_data['addrIp']."|";
-        log::add('ssaOrvibo', 'debug', $ssaEqlogicObj->getHumanName() . '[' . __FUNCTION__ . ']' . ' : ' . $log_etat);
-        
-        $ssaCmd= $ssaEqlogicObj->getCmd(null, $cmd);
-        $codeIr=$ssaCmd->getConfiguration('codeIr');
-       
-        
-        
-        try {
-            $orv= ssaOrviboDriver::getInstance()->setOrbivoIp($orbivo_data['addrIp'])->setPort($port);
-            $orv->createUdpSocket();
-            $list=$orv->emitIr($orbivo_data['addrMac'],$codeIr);
-            
-            
-            return ($list);
-        
+            $ssaCmd= $ssaEqlogicObj->getCmd(null, $cmd);
+            if (is_object(($ssaCmd))) 
+            {   $codeIr=$ssaCmd->getConfiguration('codeIr');
+
+
+
+                try {
+                    $orv= ssaOrviboDriver::getInstance()->setOrbivoIp($orbivo_data['addrIp'])->setPort($port);
+                    $orv->createUdpSocket();
+                    $list=$orv->emitIr($orbivo_data['addrMac'],$codeIr);
+
+
+                    return ($list);
+
+                }
+                catch (Exception $e)
+                {   
+                    $log_etat= $e->getMessage();
+                    log::add('ssaOrvibo','error',  $ssaEqlogicObj->getHumanName().'['.__FUNCTION__.']' .  ' : '. $log_etat); 
+                    throw new Exception("IP injoignable sur le port $port :".$e->getMessage()."\n");
+                }
+            }
+            else
+            {   $log_etat= "commande inconnu";
+                log::add('ssaOrvibo','error',  $ssaEqlogicObj->getHumanName().'['.__FUNCTION__.']' .  ' : '. $log_etat); 
+                throw new Exception("commande inconnu. cree une commande et sauvegardee la avant\n");
+                
+            }
         }
-        catch (Exception $e)
-        {   
-            $log_etat= $e->getMessage();
-            log::add('ssaOrvibo','error',  $ssaEqlogicObj->getHumanName().'['.__FUNCTION__.']' .  ' : '. $log_etat); 
-            throw new Exception("IP injoignable sur le port $port :".$e->getMessage()."\n");
+        else
+        {
+            $log_etat="equipement inconnu";
+            log::add('ssaOrvibo', 'error', 'pas d equipement' . '[' . __FUNCTION__ . ']' . ' : ' . $log_etat);
+            throw new Exception("equipement inconnu. cree un equipement et sauvegardee le avant\n");
+            
         }
-        
         
         
         
@@ -207,8 +223,14 @@ class ssaOrviboCmd extends cmd {
       }
      */
 
-    public function execute($_options = array()) {
+    public function execute($_options = array()) 
+    {   
+        $log_etat="execute |".$this->getLogicalId()."|".$this->getEqLogic_id()."|";
+        log::add('ssaOrvibo','debug',  $this->getHumanName().'['.__FUNCTION__.']' .  ' : '.$log_etat);
+        $eqLogic = $this->getEqLogic();
+        $eqLogic->sendIr($this->getEqLogic_id(),$this->getLogicalId());
         
+        return $this->getLogicalId();
     }
 
     /*     * **********************Getteur Setteur*************************** */

@@ -276,7 +276,7 @@ class ssaOrviboDriver
 
     private function subscribe($mac)
     {	
-		$macReversed=array_reverse($this->HexStringToArray($mac));
+	$macReversed=array_reverse($this->HexStringToArray($mac));
      
        	$payload  = $this->makePayload(array(0x68, 0x64, 0x00, 0x1e, 0x63, 0x6c));
        	$payload .= $this->makePayload($this->HexStringToArray($mac));
@@ -284,15 +284,28 @@ class ssaOrviboDriver
        	$payload .= $this->makePayload($macReversed);
        	$payload .= $this->makePayload($this->twenties);
 
-       	socket_sendto($this->sock, $payload, strlen($payload), 0, $this->orbivoIp, $this->port);
-		
+       	$client=socket_sendto($this->sock, $payload, strlen($payload), 0, $this->orbivoIp, $this->port);
+	if (!$client)
+        {
+            $errorcode = socket_last_error();
+            $errormsg = socket_strerror($errorcode);
+            throw new Exception("[subscribe] Could not bind socket : [$errorcode] $errormsg \n");
+                   
+        }	
 
 
     }
-   	function learningIr($mac)
-   	{
-
-       $this->subscribe($mac);
+    
+    function learningIr($mac)
+    {
+       try {
+        
+           $this->subscribe($mac);
+       }
+       catch (Exception $e)
+       {   
+            throw new Exception($e->getMessage());
+       }
 		
 
 		/*
@@ -313,13 +326,23 @@ class ssaOrviboDriver
         $payload  .= $this->makePayload($this->twenties);
         $payload  .= $this->makePayload(array(0x01, 0x00, 0x00, 0x00, 0x00, 0x00));
   		
-  		socket_sendto($this->sock, $payload, strlen($payload), 0, $this->orbivoIp, $this->port);
-		
-		$code=$this->receiveMessage('learning');
-		return $code;
+  	
+        $client=socket_sendto($this->sock, $payload, strlen($payload), 0, $this->orbivoIp, $this->port);
+	if (!$client)
+        {
+            $errorcode = socket_last_error();
+            $errormsg = socket_strerror($errorcode);
+            throw new Exception("[learnIr] Could not bind socket : [$errorcode] $errormsg \n");
+                   
+        }
+        
+        
+        
+	$code=$this->receiveMessage('learning');
+	return $code;
 
 		
-   	}
+   }
 
 
    	/**

@@ -3,7 +3,7 @@
     <id>ssaOrvibo</id>
     <name>Orvibo</name>
     <description>Orvibo SSA</description>
-    <icon>fa fa-keyboard-o</icon>
+    <icon>fa fa-share-alt</icon>
     <licence>AGPL</licence>
     <author>Stephane SAUTRON</author>
     <installation>Aucune</installation>

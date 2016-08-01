@@ -166,28 +166,32 @@ function addCmdToTable(_cmd) {
         tr += '<tr class="cmd" data-cmd_id="' + init(_cmd.id) + '">';
         tr += '<td>';
         tr += '     <span class="cmdAttr" data-l1key="id"></span>';
+        tr += '</td>';
+        tr += '<td>';
         tr += '     <input class="cmdAttr form-control type input-sm" data-l1key="type" value="info" disabled style=" display : none; margin-bottom : 5px;" />';
         tr += '     <span class="subType" subType="' + init(_cmd.subType) + '" style=" display : none; "></span>';
         tr += '     <div class="ssaOrviboCmd">';
-        tr += '         <input class="ssaOrviboCmdName cmdAttr form-control input-sm" data-l1key="name">';
+        tr += '         <input class="ssaOrviboCmdName cmdAttr form-control input-sm" data-l1key="name" >';
         tr += '         <input class="ssaOrviboCmdLogicalId cmdAttr form-control input-sm" data-l1key="logicalId" style=" display : none; ">';
         tr += '     </div>';
         tr += '</td>';
         tr += '<td>';
         tr += '     <div class="ssaOrviboIr">';
     
-        tr += '         <textarea id="codeIr_'+ random +'"  style="height : 95px;" class="ssaOrviboCodeIr cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="codeIr" placeholder="{{CodeIr}}"></textarea>';
+        tr += '         <textarea id="codeIr_'+ random +'"  style="height : 95px;" class="ssaOrviboCodeIr  expertModeVisible cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="codeIr" placeholder="{{CodeIr}}"></textarea>';
+        
         
         tr += '         <span class="input-group-btn">';
         tr += '           <button type="button" class="btn btn-default bt_ssaOrviboLearn" data-value="learn" data-target="codeIr__'+ random +'" data-toggle="spinner">';
-        tr += '             <span class="glyphicon glyphicon-plus">Learn</span>';
+        tr += '             <span class="glyphicon glyphicon-cog">&nbsp;Learn</span>';
         tr += '           </button>';
-        tr += '         </span>';
-        tr += '         <span class="input-group-btn">';
+        //tr += '         </span>';
+        //tr += '         <span class="input-group-btn">';
         tr += '           <button type="button" class="btn btn-default bt_ssaOrviboTest" data-value="test" data-target="codeIr__'+ random +'" data-toggle="spinner">';
-        tr += '             <span class="glyphicon glyphicon-plus">Test</span>';
+        tr += '             <span class="glyphicon glyphicon-play-circle">&nbsp;Test</span>';
         tr += '           </button>';
         tr += '         </span>';
+        
         
         tr += '     </div>';
        

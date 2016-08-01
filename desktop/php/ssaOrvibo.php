@@ -129,6 +129,7 @@ foreach ($eqLogics as $eqLogic) {
     <table id="table_cmd" class="table table-bordered table-condensed">
         <thead>
             <tr>
+                <th class="col-sm-1">{{Id}}</th>
                 <th class="col-sm-1">{{Nom}}</th>
                 <th class="col-sm-1">{{codeIr}}</th>
                 <th class="col-sm-1">{{Supprimer}}</th>
