@@ -183,7 +183,7 @@ function addCmdToTable(_cmd) {
         
         tr += '         <span class="input-group-btn">';
         tr += '           <button type="button" class="btn btn-default bt_ssaOrviboLearn" data-value="learn" data-target="codeIr__'+ random +'" data-toggle="spinner">';
-        tr += '             <span class="glyphicon glyphicon-cog">&nbsp;Learn</span>';
+        tr += '             <span class="glyphicon glyphicon-cog">&nbsp;Apprentissage</span>';
         tr += '           </button>';
         //tr += '         </span>';
         //tr += '         <span class="input-group-btn">';
