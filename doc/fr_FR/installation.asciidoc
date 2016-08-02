@@ -1,0 +1,2 @@
+Il n'y a pas d'actions particuliere lors  de l'installation du plugin.
+Il faut bien penser à configurer les AllOne

@@ -1,32 +1,26 @@
 :icons:
-== ssaOrvivo
+== ssaOrvibo allOne
 
 === Description
 
-
-Ce plugin permet de piloter le  Orvibo : AllOne
-
-Les AllOne etant  des passerrelles  permettant de piloter des appareils infrarouge (TV, climatiseur, etc...).
-
-
-
-
+include::description.asciidoc[]
 
 '''
-=== Configuration du plugin
-include::configuration_pluging.asciidoc[]
+=== Installation
+'''
+include::installation.asciidoc[]
 
 '''
-=== Configuration d'un objet : etape 1
-include::configuration_objet_1.asciidoc[]
-
+=== Configuration
 '''
-=== Configuration d'un objet : etape 2
-include::configuration_objet_1.asciidoc[]
+include::configuration.asciidoc[]
 
 '''
 === FAQ
+'''
 include::faq.asciidoc[]
 
+'''
 === Devellopeur
+'''
 include::dev.asciidoc[]
