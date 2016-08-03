@@ -46,7 +46,7 @@ function printMacLan(orbivo,_myIp){
     });
 }
 
-function learnIr(orbivo,element){
+function learnIr(orbivo,element,flag,rounded){
     
     
 	$.ajax({// fonction permettant de faire de l'ajax
@@ -62,6 +62,8 @@ function learnIr(orbivo,element){
 			global : false,
             error: function (request, status, error) {
             	handleAjaxError(request, status, error);
+                flag.val("");
+                rounded.prop('checked', false);
             },
 	   success: function(data) 
            { 
@@ -72,6 +74,9 @@ function learnIr(orbivo,element){
             }
              
              element.val(data.result);
+             flag.val("checked");
+             
+             rounded.prop('checked', true);
             
             }
     });
@@ -116,8 +121,11 @@ $("#table_cmd").delegate('.bt_ssaOrviboLearn', 'click', function () {
     
     var el = $(this);
     codeIr= el.closest('.ssaOrviboIr').find('.ssaOrviboCodeIr');
+    flag= el.closest('.ssaOrviboIr').find('.ssaOrviboLearnFlag');
+    rounded= el.closest('.ssaOrviboIr').find('.ssaOrviboLearnRounded');
+   
     orbivo=$("#ssaOrviboId").val();
-    learnIr(orbivo,codeIr);
+    learnIr(orbivo,codeIr,flag,rounded);
 });
 
 
@@ -179,14 +187,22 @@ function addCmdToTable(_cmd) {
         tr += '     <div class="ssaOrviboIr">';
     
         tr += '         <textarea id="codeIr_'+ random +'"  style="height : 95px;" class="ssaOrviboCodeIr  expertModeVisible cmdAttr form-control input-sm" data-l1key="configuration" data-l2key="codeIr" placeholder="{{CodeIr}}"></textarea>';
+       
+        tr += '         <input id="learn_'+ random +'" class="ssaOrviboLearnFlag cmdAttr form-control input-sm" data-l1key="configuration"  data-l2key="apprentissage" style=" display : none; ">';        
+
         
+        tr += '          <span class="input-group-btn">';
         
-        tr += '         <span class="input-group-btn">';
         tr += '           <button type="button" class="btn btn-default bt_ssaOrviboLearn" data-value="learn" data-target="codeIr__'+ random +'" data-toggle="spinner">';
-        tr += '             <span class="glyphicon glyphicon-cog">&nbsp;Apprentissage</span>';
+        
+        tr += '             <span class="roundedOne">';
+        tr += '                 <input class="ssaOrviboLearnRounded" type="checkbox" value="None" id="roundedOne_'+ random +'" name="check" '+_cmd.configuration.apprentissage+'/>';
+        tr += '                 <label for="roundedOne_'+ random +'"></label>';
+        tr += '             </span>';
+                
+        tr += '            <span class="">&nbsp;Apprentissage</span>';
         tr += '           </button>';
-        //tr += '         </span>';
-        //tr += '         <span class="input-group-btn">';
+       
         tr += '           <button type="button" class="btn btn-default bt_ssaOrviboTest" data-value="test" data-target="codeIr__'+ random +'" data-toggle="spinner">';
         tr += '             <span class="glyphicon glyphicon-play-circle">&nbsp;Test</span>';
         tr += '           </button>';
@@ -203,6 +219,8 @@ function addCmdToTable(_cmd) {
         
         
         $('#table_cmd tbody').append(tr);
+        
+        
         $('#table_cmd tbody tr:last').setValues(_cmd, '.cmdAttr');
     }
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <info>
     <id>ssaOrvibo</id>
-    <name>Orvibo</name>
-    <description>Orvibo SSA</description>
+    <name>Orvibo AllOne</name>
+    <description>Orvibo AllOne SSA</description>
     <icon>fa fa-share-alt</icon>
     <licence>AGPL</licence>
     <author>Stephane SAUTRON</author>

@@ -169,4 +169,5 @@ foreach ($eqLogics as $eqLogic) {
 <?php //include_file('3rdparty', 'datepicker/DateTimePicker', 'css', 'ssaThermostat'); ?>
 
 <?php include_file('desktop', 'ssaOrvibo', 'js', 'ssaOrvibo');?>
+<?php include_file('desktop', 'ssaOrvibo', 'css', 'ssaOrvibo');?>
 <?php include_file('core', 'plugin.template', 'js');?>
