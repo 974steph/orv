@@ -27,6 +27,6 @@ require_once dirname(__FILE__) . '/../../../../core/php/core.inc.php';
 
 include_file('core', 'ssaOrvibo', 'class', 'ssaOrvibo');
 require_once dirname(__FILE__) . '/../../3rdparty/driver/ssaOrviboDriver.class.php';
-//include_file('3rdparty/pid', 'ssaThermostatPID', 'class','ssaThermostat');
+
 
 ?>
