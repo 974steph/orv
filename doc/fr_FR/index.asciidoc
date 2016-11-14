@@ -1,26 +1,40 @@
+:Date: $Date$
+:Revision: $Id$
+:docinfo:
+:title:  index
+:page-liquid:
 :icons:
-== ssaOrvibo allOne
 
-=== Description
+
 
 include::description.asciidoc[]
 
-'''
-=== Installation
-'''
+
+
 include::installation.asciidoc[]
 
-'''
-=== Configuration
-'''
-include::configuration.asciidoc[]
 
-'''
-=== FAQ
-'''
+
+
+include::configuration_orvibo.asciidoc[]
+
+
+include::configuration_pluging.asciidoc[]
+
+
+
+include::configuration_objet_1.asciidoc[]
+
+
+include::configuration_objet_2.asciidoc[]
+
+
 include::faq.asciidoc[]
 
-'''
-=== Devellopeur
-'''
+
 include::dev.asciidoc[]
+
+
+include::changelog.asciidoc[]
+
+include::roadmap.asciidoc[]

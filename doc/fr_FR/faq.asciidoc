@@ -1,2 +1,10 @@
-
+:Date: $Date$
+:Revision: $Id$
+:docinfo:
+:title:  guide
+:page-liquid:
+:icons:
+:imagesdir: ../images
+== FAQ
+'''
 Pas de questions pour le moment.
