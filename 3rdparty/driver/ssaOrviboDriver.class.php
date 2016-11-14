@@ -356,7 +356,7 @@ class ssaOrviboDriver
     	$end_time = time() + 2;
     	
 		while ($end_time > time()) {
-    		socket_recvfrom($this->sock, $buffer, 512, 0, $this->orbivoIp, $this->port);
+    		socket_recvfrom($this->sock, $buffer, 4096, 0, $this->orbivoIp, $this->port);
     		$message=$this->binaryToString($buffer);
 
     		
