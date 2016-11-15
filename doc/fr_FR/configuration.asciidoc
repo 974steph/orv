@@ -7,11 +7,11 @@ include::configuration_orvibo.asciidoc[]
 include::configuration_pluging.asciidoc[]
 
 '''
-==== Configuration d'un objet : etape 1
+==== Configuration d'un objet : étape 1
 include::configuration_objet_1.asciidoc[]
 
 '''
-==== Configuration d'un objet : etape 2
+==== Configuration d'un objet : étape 2
 include::configuration_objet_2.asciidoc[]
 
 '''

@@ -7,35 +7,35 @@
 :imagesdir: ../images
 == Configuration d'un objet : etape 2
 '''
-La deuxieme étapes de configuration consite en l'ajout des commandes de votre Orvibo.
+La deuxième étapes de configuration consiste en l'ajout des commandes de votre Orvibo.
 Pour cela cliquez sur le bouton "ajouter une commande"
 
 image::plugin4.png[]
 
-Une nouvelle commande apparait. Le champs "Identifiant" est vide.
+Une nouvelle commande apparaît. Le champs "Identifiant" est vide.
 Donner un nom à votre commande.
 
 image::plugin5.png[]
 
 Passons maintenant à l'apprentissage de la commande :
 
-.  cliquez sur le bouton "apprentisage"
+.  cliquez sur le bouton "apprentissage"
 .  le cercle lumineux de l'orbivo passe au rouge
-.  diriger votre telécommande vers l'orvibo et appuyer sur une touche
+.  diriger votre télécommande vers l'orvibo et appuyer sur une touche
 .  le cercle lumineux de l'orbivo passe au bleu
-.  un tres long code s'affiche dans le champ "CodeIr"
+.  un très long code s'affiche dans le champ "CodeIr"
 
 image::plugin6.png[]
 Bravo l'apprentissage est terminée.
 
 Sauvegarder maintenant.
 
-TIP: si vous connaissez déjà le code infrarouge de la commande, vous pouvez le saisir directement dans le champsCodeIr.
+TIP : si vous connaissez déjà le code infrarouge de la commande, vous pouvez le saisir directement dans le champs CodeIr.
 
-TIP: L'absence de du champs Identifiant signifis que la commande n'a pas été sauvegardé.
-
-
+TIP : l'absence du champs Identifiant signifie que la commande n'a pas été sauvegardée.
 
 
-Sauvergarder votre équipement !
-Maintenant vous pouvez utiliser le bouton "test"
+
+
+Sauvegardez votre équipement !
+Maintenant vous pouvez utiliser le bouton "test".

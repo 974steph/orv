@@ -7,18 +7,18 @@
 :imagesdir: ../images
 == Configuration d'un objet : etape 1
 '''
-La configuration des Equipements tableau est accessible a partir du menu plugin :
-il vous suffit de cliquer sur le bouton "ajouter"
+La configuration des Équipements tableau est accessible a partir du menu plugin :
+il vous suffit de cliquer sur le bouton "ajouter".
 
 image::plugin2.png[]
 
-La premiere étape est de renseigner l'adresse Ip de sa passerelle dans le champ "adresse IP".
+La première étape est de renseigner l'adresse IP de sa passerelle dans le champ "adresse IP".
 Vous trouverez cette adresse sur l'interface de gestion de votre box internet.
-Dans une prochaine version du pluging j'ajouterai une option de recherche.
+Dans une prochaine version du plugin j'ajouterai une option de recherche.
 
 
 image::plugin3.png[]
 
-Une fois l'adresse IP renseigné, cliqué sur le bouton "recherche équipement". Le champ "adresse mac" devrait se mettre à jour.
+Une fois l'adresse IP renseignée, cliquez sur le bouton "recherche équipement". Le champ "adresse mac" devrait se mettre à jour.
 
-Sauvergarder votre équipement
+Sauvegarder votre équipement.
