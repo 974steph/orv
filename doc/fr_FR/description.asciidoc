@@ -7,6 +7,6 @@
 :imagesdir: ../images
 == Description
 '''
-Ce plugin permet de piloter le  Orvibo : AllOne
+Ce plugin permet de piloter le Orvibo : AllOne.
 
-Les AllOne etant  des passerrelles  permettant de piloter des appareils infrarouge (TV, climatiseur, etc...).
+Les AllOne sont des passerelles permettant de piloter des appareils infrarouge (TV, climatiseur, etc...).
