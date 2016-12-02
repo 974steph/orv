@@ -1,0 +1,16 @@
+:Date: $Date$
+:Revision: $Id$
+:docinfo:
+:title:  changelog
+:page-liquid:
+:icons:
+:imagesdir: ../images
+
+
+
+== Changelog
+'''
+
+.version : 11 nov 2016
+* prise en compte clim mitsubishi
+

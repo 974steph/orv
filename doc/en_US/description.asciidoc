@@ -1,0 +1,12 @@
+:Date: $Date$
+:Revision: $Id$
+:docinfo:
+:title:  guide
+:page-liquid:
+:icons:
+:imagesdir: ../images
+== Description
+'''
+Ce plugin permet de piloter le Orvibo : AllOne.
+
+Les AllOne sont des passerelles permettant de piloter des appareils infrarouge (TV, climatiseur, etc...).

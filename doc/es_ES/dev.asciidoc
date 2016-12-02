@@ -5,6 +5,6 @@
 :page-liquid:
 :icons:
 :imagesdir: ../images
-== FAQ
+== Dévelopeur
 '''
-Pas de questions pour le moment.
+974steph
