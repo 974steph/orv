@@ -1,6 +1,6 @@
 
-==== Configuration du AllOne
-include::configuration_orvibo.asciidoc[]
+==== AllOne Configuration
+include::configuration_orvibo.AsciiDoc]
 
 '''
 ==== Configuration du plugin
