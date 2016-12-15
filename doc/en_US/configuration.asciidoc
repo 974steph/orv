@@ -3,7 +3,7 @@
 include::configuration_orvibo.AsciiDoc]
 
 '''
-==== Configuration du plugin
+==== The plugin configuration
 include::configuration_pluging.asciidoc[]
 
 '''
