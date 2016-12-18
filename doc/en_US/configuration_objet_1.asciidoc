@@ -21,4 +21,4 @@ image::plugin3.png[]
 
 Une fois l'adresse IP renseignée, cliquez sur le bouton "recherche équipement". Le champ "adresse mac" devrait se mettre à jour.
 
-Sauvegarder votre équipement.
+Save your equipment.
