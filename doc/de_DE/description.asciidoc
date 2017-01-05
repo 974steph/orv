@@ -5,7 +5,7 @@
 :page-liquid:
 :icons:
 :imagesdir: ../images
-== Description
+== Beschreibung
 '''
 Ce plugin permet de piloter le Orvibo : AllOne.
 
