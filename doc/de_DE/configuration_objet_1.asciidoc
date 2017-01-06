@@ -5,7 +5,7 @@
 :page-liquid:
 :icons:
 :imagesdir: ../images
-== Configuration d'un objet : etape 1
+== Konfiguration von Objekten : Schritt 1
 '''
 La configuration des Équipements tableau est accessible a partir du menu plugin :
 il vous suffit de cliquer sur le bouton "ajouter".

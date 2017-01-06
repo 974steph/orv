@@ -5,6 +5,6 @@
 :page-liquid:
 :icons:
 :imagesdir: ../images
-== Dévelopeur
+== Entwickler
 '''
 974steph

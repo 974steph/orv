@@ -5,7 +5,7 @@
 :page-liquid:
 :icons:
 :imagesdir: ../images
-== Configuration du AllOne
+== AllOne Konfiguration
 '''
 Pour être reconnu par le plugin, le AllOne doit déjà être configuré sur votre réseau wifi.
 

@@ -5,7 +5,7 @@
 :page-liquid:
 :icons:
 :imagesdir: ../images
-== Configuration du plugin
+== Plugin Konfiguration
 '''
 après le téléchargement du plugin, il vous suffit juste d'activer celui-ci, il n'y a aucune configuration a ce niveau.
 

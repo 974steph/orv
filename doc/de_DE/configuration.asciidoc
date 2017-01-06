@@ -1,17 +1,17 @@
 
-==== Configuration du AllOne
+==== AllOne Konfiguration
 include::configuration_orvibo.asciidoc[]
 
 '''
-==== Configuration du plugin
+==== Plugin Konfiguration
 include::configuration_pluging.asciidoc[]
 
 '''
-==== Configuration d'un objet : étape 1
+==== Konfiguration von Objekten : Schritt 1
 include::configuration_objet_1.asciidoc[]
 
 '''
-==== Configuration d'un objet : étape 2
+==== Konfiguration von Objekten : Schritt 2
 include::configuration_objet_2.asciidoc[]
 
 '''

@@ -5,7 +5,7 @@
 :page-liquid:
 :icons:
 :imagesdir: ../images
-== Configuration d'un objet : etape 2
+== Konfiguration von Objekten : Schritt 2
 '''
 La deuxième étapes de configuration consiste en l'ajout des commandes de votre Orvibo.
 Pour cela cliquez sur le bouton "ajouter une commande"
