@@ -9,7 +9,7 @@
 '''
 Pour être reconnu par le plugin, le AllOne doit déjà être configuré sur votre réseau wifi.
 
-voici comment procéder :
+Hier sehen Sie wie vorzugehen ist :
 
 === Installation de wiwo sur son portable ou sa tablette
 Il faut se rendre sur le PlayStore ou l’Appstore afin de télécharger l’application Wiwo nécessaire à l’utilisation du AllOne.
