@@ -1,0 +1,22 @@
+:Date: $Date$
+:Revision: $Id$
+:docinfo:
+:title:  changelog
+:page-liquid:
+:icons:
+:imagesdir: ../images
+
+
+
+== Änderungsprotokoll
+'''
+.version : 03 octobre 2017
+* correction erreur 500
+* support jeedom V3.1.3
+
+.version : 11 sept 2017
+* support jeedom V3
+
+.version : 11 Nov 2016
+* prise en compte clim mitsubishi
+
