@@ -29,10 +29,10 @@ Appuyer de nouveau  5 sec. Le Orvibo clignotera en bleu, ce qui indiquera qu’i
 TIP: Par défaut l’objet non configuré arrive avec la LED rouge clignotante.
 C’est le mode avec LED  bleue clignotante rapidement.
 
-=== Attendre la fin de la configuration
+===== Warten Sie auf das Ende der Konfiguration
 
 A cette étape, il n'y rien à faire,
-il faut attendre que la configuration se fasse.
+Sie müssen warten, bis die Konfiguration abgeschlossen ist.
 Une fois finie, on retouve dans le menu "Device" un device nommé AllOne.
 
 Le AllOne est configuré, il n'y a plus qu'a configurer le plugin
