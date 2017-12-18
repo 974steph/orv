@@ -12,10 +12,10 @@
 '''
 .Version : 3. Oktober 2017
 * correction erreur 500
-* support jeedom V3.1.3
+* Jeedom V3.1.3 Support
 
 .Version: 11. September 2017
-* support jeedom V3
+* Jeedom V3 Support
 
 .version : 11 Nov 2016
 * prise en compte clim mitsubishi
